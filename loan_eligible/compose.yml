@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfilef
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    networks:
+      - app_network
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfileb  
+    ports:
+      - "5000:5000"
+    networks:
+      - app_network
+    volumes:
+    - "C:/loan_eligible/Eligible_Loan/src/Notebook/model_pickle.pkl:/app/model_pickle.pkl"
+
+
+networks:
+  app_network:
+    driver: bridge
