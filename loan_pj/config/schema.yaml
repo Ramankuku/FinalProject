@@ -1,0 +1,58 @@
+columns:
+- ID: int64
+- Age: int64
+- Experience: int64
+- Income: int64
+- ZIP Code: int64
+- Family: int64
+- CCAvg: object
+- Education: object
+- Mortgage: int64
+- Personal Loan: object
+- Securities Account: object
+- CD Account: object
+- Online: object
+- CreditCard: object
+
+
+
+categorical_columns:
+- CCAvg
+- Personal Loan
+- Securities Account
+- Education
+- CD Account
+- Online
+- CreditCard
+
+numerical_columns:
+- ID
+- Age
+- Experience
+- Income
+- ZIP Code
+- Family
+- Mortgage
+
+drop_columns:
+- ID
+- ZIP Code
+- Family
+- Age 
+- Online
+- Securities Account
+
+# ['Experience', 'Income', 'CCAvg', 'Education', 'Mortgage', 'CD Account', 'CreditCard']
+
+
+categorical_feature:
+- CD Account
+- CreditCard
+
+
+ordinal_feature:
+- Education
+
+
+ccavg:
+- CCAvg
