@@ -1,0 +1,10 @@
+FROM python:3.9
+WORKDIR /app
+
+COPY . /app
+COPY src/Notebook/model_pickle.pkl /app/model_pickle.pkl 
+RUN pip install --no-cache-dir -r brequirements.txt
+
+EXPOSE 5000
+
+CMD ["python", "backend.py"]
